@@ -1,15 +1,15 @@
 {
 
     "people":[
-        {
-            "name": "a",
+        { 
+            "name": "Jamie Bakers",
             "image": {
                 "width": "",
                 "height": "",
-                "path": "/Images/Bob.png"
+                "path": "/Images/Image1.jpg"
             },
-            "team": "team1",
-            "description": "test desc a"
+            "team": "San Jose Sharks - Hockey",
+            "description": "Participated in Nepean Minor Hockey as a member of the Nepean Raiders Jr. A Team."
         },
 
         {
@@ -17,7 +17,7 @@
             "image": {
                 "width": "",
                 "height": "",
-                "path": "/Images/Billy.png"
+                "path": "/Images/Image2.jpg"
             },
             "team": "team2",
             "description": "test desc b"
@@ -28,7 +28,7 @@
             "image": {
                 "width": "",
                 "height": "",
-                "path": "/Images/Billy.png"
+                "path": "/Images/Image3.jpg"
             },
             "team": "team2",
             "description": "test desc c"

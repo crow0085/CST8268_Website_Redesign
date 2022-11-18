@@ -92,6 +92,10 @@ span#logo-txt {
     margin: auto 1em;
 }
 
+.nav-element:hover{
+    color: #b8860b;
+}
+
 .nav-icon {
     width: 26px;
     fill: white;
