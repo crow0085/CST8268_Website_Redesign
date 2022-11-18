@@ -1,3 +1,8 @@
+$(document).ready(function() {
+    $("#header").load("header.html");
+    $("#footer").load("footer.html");
+});
+
 window.addEventListener('DOMContentLoaded', (event) => {
     /* Mobile Menu */
     document.getElementById('mobile-menu-btn').addEventListener('click', event => {
