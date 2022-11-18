@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="main.css">
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS/common.css">
+<link rel="icon" href="Images/trophy.svg" type="image/svg+xml">
+<title>header</title>
+<header>
+    <nav id="navbar">
+        <a href="index.html" class="logo-container">
+            <img id="logo-img" src="Images/trophy.svg" alt="Website logo">
+            <span id="logo-txt">AZUL</span>
+        </a>
+        <div class="nav-elements">
+            <a href="index.html" class="nav-element">Home</a>
+            <a href="Gallery.html" class="nav-element">Wall of Fame</a>
+            <a href="Contact.html" class="nav-element">Contact</a>
+            <button id="mobile-menu-btn" class="nav-btn menu-up">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' id='menu-icon' class='nav-icon'>
+                    <path stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='48'
+                        d='M88 152h336M88 256h336M88 360h336' />
+                </svg>
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' id='cross-icon' class='nav-icon inactive'>
+                    <path
+                        d='M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z' />
+                </svg>
+            </button>
+            <div id="mobile-menu" class="inactive">
+                <a href="index.html" class="mobile-nav-element">Home</a>
+                <a href="Gallery.html" class="mobile-nav-element">Wall of Fame</a>
+                <a href="Contact.html" class="mobile-nav-element">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>

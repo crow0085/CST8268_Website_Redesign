@@ -1,11 +1,10 @@
-
 /*
     ----------------- COMMON CSS ------------------------
 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap%27');
 
 :root {
-    --ff-sans-serif:'Poppins', sans-serif;
+    --ff-sans-serif: 'Poppins', sans-serif;
 }
 
 * {
@@ -15,9 +14,11 @@
     font-family: var(--ff-sans-serif);
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -29,7 +30,8 @@ a {
 
 main {
     min-height: 100%;
-    margin-bottom: -170px; /* This number will always be the height of the footer */
+    margin-bottom: -170px;
+    /* This number will always be the height of the footer */
 }
 
 section {
@@ -38,8 +40,8 @@ section {
 
 .inactive,
 .inactive * {
-    visibility: hidden!important;
-    height: 0!important;
+    visibility: hidden !important;
+    height: 0 !important;
     position: absolute;
 }
 
@@ -125,6 +127,7 @@ span#logo-txt {
     color: #f2f2f2;
     font-size: 18px;
 }
+
 .mobile-nav-element:first-child {
     padding-top: 25%;
 }
@@ -133,21 +136,26 @@ span#logo-txt {
     #navbar {
         padding: 0 10px;
     }
+
     .nav-element {
         display: none;
     }
+
     #mobile-menu-btn {
         display: initial;
     }
 }
+
 /* END Navbar */
 
 /* Footer */
 footer {
-    background-color: #3f51b5; /* Monochromatic of the primary color */
+    background-color: #3f51b5;
+    /* Monochromatic of the primary color */
     padding: 40px 50px 15px 50px;
     height: 170px;
 }
+
 footer * {
     color: white;
 }
@@ -161,12 +169,14 @@ footer * {
         "social . contact";
 }
 
-footer .contact { 
-    grid-area: contact; 
+footer .contact {
+    grid-area: contact;
     text-align: right;
 }
 
-footer .social { grid-area: social; }
+footer .social {
+    grid-area: social;
+}
 
 footer .social img {
     display: inline-block;
@@ -179,17 +189,19 @@ footer .legal {
     text-align: center;
     font-size: small;
     padding-top: 15px;
-}  
+}
 
 @media (max-width: 769px) {
     footer {
         height: auto;
         padding: 25px;
     }
+
     footer .legal {
         padding-top: 25px;
-    }  
+    }
 }
+
 /* END Footer */
 
 
