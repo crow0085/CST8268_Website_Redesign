@@ -2,20 +2,38 @@
 /*
     ----------------- COMMON CSS ------------------------
 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap%27');
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+:root {
+    --ff-sans-serif:'Poppins', sans-serif;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-sans-serif);
+}
+
+html, body {
+    height: 100%;
+}
 body {
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+main {
+    min-height: 100%;
+    margin-bottom: -140px; /* This number will always be the height of the footer */
+}
+
+section {
+    padding: 3rem 1.5rem;
 }
 
 .inactive,
@@ -48,9 +66,8 @@ a {
     display: contents;
 }
 
-#logo-icon {
+#logo-img {
     height: 40px;
-    fill: darkgoldenrod;
 }
 
 .nav-elements {
@@ -80,6 +97,7 @@ a {
 
 #mobile-menu {
     position: absolute;
+    margin-top: 70px;
     width: 100%;
     left: 0;
     text-align: center;
@@ -115,6 +133,48 @@ a {
     }
 }
 /* END Navbar */
+
+/* Footer */
+footer {
+    background-color: #B17358; /* Monochromatic of the primary color */
+    padding: 50px 50px 15px 50px;
+    height: 140px;
+}
+
+#footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "social . contact";
+}
+
+footer .contact { 
+    grid-area: contact; 
+    text-align: right;
+}
+
+footer .social { grid-area: social; }
+
+footer .social img {
+    display: inline-block;
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
+
+footer .legal {
+    text-align: center;
+    font-size: 1vw;
+}  
+
+@media (max-width: 769px) {
+    footer {
+        height: auto;
+    }
+}
+/* END Footer */
 
 
 /*
