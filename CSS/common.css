@@ -1,0 +1,198 @@
+
+/*
+    ----------------- COMMON CSS ------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap%27');
+
+:root {
+    --ff-sans-serif:'Poppins', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-sans-serif);
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    min-height: 100%;
+    margin-bottom: -170px; /* This number will always be the height of the footer */
+}
+
+section {
+    padding: 3rem 1.5rem;
+}
+
+.inactive,
+.inactive * {
+    visibility: hidden!important;
+    height: 0!important;
+    position: absolute;
+}
+
+/* Navbar */
+#navbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "logo-container nav-elements nav-elements nav-elements";
+    align-items: center;
+    padding: 0 50px;
+    width: 100%;
+    height: 70px;
+    background: #606FC7;
+    box-shadow: 0px 1px 10px #999;
+}
+
+.logo-container {
+    cursor: pointer;
+    grid-area: logo-container;
+    justify-self: start;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+#logo-img {
+    height: 40px;
+}
+
+span#logo-txt {
+    color: white;
+    padding-left: 15px;
+    font-size: 1.5em;
+}
+
+.nav-elements {
+    grid-area: nav-elements;
+    justify-self: end;
+    height: inherit;
+    display: flex;
+    color: white;
+}
+
+.nav-element {
+    margin: auto 1em;
+}
+
+.nav-icon {
+    width: 26px;
+    fill: white;
+    pointer-events: none;
+}
+
+#navbar button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#mobile-menu {
+    position: absolute;
+    margin-top: 70px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    background: rgb(0 0 0 / 0.7);
+    height: 100vh;
+    transition: all 300ms;
+}
+
+#mobile-menu-btn {
+    display: none;
+}
+
+.mobile-nav-element {
+    width: 100%;
+    display: block;
+    padding-bottom: 3em;
+    color: #f2f2f2;
+    font-size: 18px;
+}
+.mobile-nav-element:first-child {
+    padding-top: 25%;
+}
+
+@media (max-width: 769px) {
+    #navbar {
+        padding: 0 10px;
+    }
+    .nav-element {
+        display: none;
+    }
+    #mobile-menu-btn {
+        display: initial;
+    }
+}
+/* END Navbar */
+
+/* Footer */
+footer {
+    background-color: #3f51b5; /* Monochromatic of the primary color */
+    padding: 40px 50px 15px 50px;
+    height: 170px;
+}
+footer * {
+    color: white;
+}
+
+#footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "social . contact";
+}
+
+footer .contact { 
+    grid-area: contact; 
+    text-align: right;
+}
+
+footer .social { grid-area: social; }
+
+footer .social img {
+    display: inline-block;
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
+
+footer .legal {
+    text-align: center;
+    font-size: small;
+    padding-top: 15px;
+}  
+
+@media (max-width: 769px) {
+    footer {
+        height: auto;
+        padding: 25px;
+    }
+    footer .legal {
+        padding-top: 25px;
+    }  
+}
+/* END Footer */
+
+
+/*
+    ----------------- END COMMON CSS ------------------------
+*/
