@@ -30,3 +30,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
     /* END Mobile Menu */
 });
+
+$(function () {
+    $("#header").load("header.html");
+    $("#footer").load("footer.html");
+});
