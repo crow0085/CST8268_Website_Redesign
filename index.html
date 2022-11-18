@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="CSS/common.css">
-        <title></title>
-    </head>
-    <body>
-        <h1>Hello, my branch works</h1
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/common.css">
+    <script defer src="scripts.js"></script>
+    <!-- CHANGE FAVICONS TO PROPER PATH (USE SIZE 32X32px) -->
+    <!-- <link rel="icon" href="/icon.png" type="image/png"> -->
+    <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar"> <!-- Extra: Include aria labels and role tags -->
+            <a href="index.html" class="logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" id="logo-icon" viewBox="0 0 512 512"><title>Trophy</title><path d="M464 80h-60.1a4 4 0 01-4-4V63.92a32 32 0 00-32-31.92l-223.79.26a32 32 0 00-31.94 31.93V76a4 4 0 01-4 4H48a16 16 0 00-16 16v16c0 54.53 30 112.45 76.52 125.35a7.82 7.82 0 015.55 5.9c5.77 26.89 23.52 52.5 51.41 73.61 20.91 15.83 45.85 27.5 68.27 32.48a8 8 0 016.25 7.8V444a4 4 0 01-4 4h-59.55c-8.61 0-16 6.62-16.43 15.23A16 16 0 00176 480h159.55c8.61 0 16-6.62 16.43-15.23A16 16 0 00336 448h-60a4 4 0 01-4-4v-86.86a8 8 0 016.25-7.8c22.42-5 47.36-16.65 68.27-32.48 27.89-21.11 45.64-46.72 51.41-73.61a7.82 7.82 0 015.55-5.9C450 224.45 480 166.53 480 112V96a16 16 0 00-16-16zM112 198.22a4 4 0 01-6 3.45c-10.26-6.11-17.75-15.37-22.14-21.89-11.91-17.69-19-40.67-19.79-63.63a4 4 0 014-4.15h40a4 4 0 014 4c-.02 27.45-.07 58.87-.07 82.22zm316.13-18.44c-4.39 6.52-11.87 15.78-22.13 21.89a4 4 0 01-6-3.46c0-26.51 0-56.63-.05-82.21a4 4 0 014-4h40a4 4 0 014 4.15c-.79 22.96-7.9 45.94-19.81 63.63z"/></svg>
+            </a>
+            <div class="nav-elements">
+                <a href="" class="nav-element">Gallery</a>
+                <button id="mobile-menu-btn" class="nav-btn menu-up">
+                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' id='menu-icon' class='nav-icon'>
+                        <path stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='48' d='M88 152h336M88 256h336M88 360h336'/>
+                    </svg>
+                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' id='cross-icon' class='nav-icon inactive'>
+                        <path d='M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z'/>
+                    </svg>
+                </button>
+                <div id="mobile-menu" class="inactive">
+                    <a href="" class="mobile-nav-element">Gallery</a>
+                </div>
+            </div>
+        </nav>        
+    </header> 
+    <main>
+        <section>
+            <h1>Welcome</h1>
+        </section>
+    </main>
+    <footer>
         
-        
-        <script src="" async defer></script>
-    </body>
+    </footer>
+</body>
 </html>
