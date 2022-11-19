@@ -154,9 +154,6 @@ span#logo-txt {
 
 /* Footer */
 footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
     background-color: #3f51b5;
     /* Monochromatic of the primary color */
     padding: 40px 50px 15px 50px;
