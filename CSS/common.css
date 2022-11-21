@@ -5,6 +5,13 @@
 
 :root {
     --ff-sans-serif: 'Poppins', sans-serif;
+    --fs-reg: 1em;
+    --fs-desc: 1em;
+    --fs-team: 1.25em;
+    --fs-name: 1.75em;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
 }
 
 * {
@@ -183,13 +190,15 @@ footer {
 
 
 .copyright {
+    font-size: .75rem;
     color: white;
 }
 
 
-.contactInfo {
+.contactInfo * {
     display: flex;
     flex-direction: column;
+    font-size: var(--fs-reg);
     text-align: right;
     color: white;
     margin-right: 10px;
