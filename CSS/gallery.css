@@ -85,7 +85,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 95%;
-    margin: 25px auto;
+    margin: 0 auto;
     background-color: #FFFFF0;
     border: 25px solid transparent;
     border-image-slice: 50 50 50 50;

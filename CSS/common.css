@@ -29,8 +29,9 @@ a {
 }
 
 main {
-    min-height: 100%;
-    margin-bottom: -170px;
+    min-height: calc(100vh - 179px); /* Letting footer stay on bottom */
+    padding: 25px;
+    /* margin-bottom: -170px; */
     /* This number will always be the height of the footer */
 }
 
@@ -68,6 +69,7 @@ section {
     height: inherit;
     display: flex;
     align-items: center;
+    margin-left: 36px;
 }
 
 #logo-img {
@@ -155,56 +157,51 @@ span#logo-txt {
 
 /* Footer */
 footer {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    align-items: center;
+    justify-content: space-between;
     background-color: #3f51b5;
-    /* Monochromatic of the primary color */
-    padding: 40px 50px 15px 50px;
-    height: 170px;
+    padding: 15px 66px;
 }
 
-footer * {
+.socialContainer {
+    display: inline-flex;
+}
+
+.socialIcons {
+    width: 30px;
+    /* padding: 0 10px; */
+    margin: auto 10px;
+}
+
+.socialIcons img:hover {
+    opacity: 70%;
+    transition: ease-in 100ms;
+}
+
+
+.copyright {
     color: white;
 }
 
-#footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "social . contact";
-}
 
-footer .contact {
-    grid-area: contact;
+.contactInfo {
+    display: flex;
+    flex-direction: column;
     text-align: right;
+    color: white;
 }
 
-footer .social {
-    grid-area: social;
+.contactInfo a {
+    text-decoration: none;
+    color: white;
 }
 
-footer .social img {
-    display: inline-block;
-    width: 30px;
-    height: auto;
-    margin: 0 10px;
-}
-
-footer .legal {
-    text-align: center;
-    font-size: small;
-    padding-top: 15px;
-}
-
-@media (max-width: 769px) {
-    footer {
-        height: auto;
-        padding: 25px;
-    }
-
-    footer .legal {
-        padding-top: 25px;
-    }
+.contactInfo a:hover {
+    opacity: 70%;
+    transition: ease-in 100ms;
 }
 
 /* END Footer */
