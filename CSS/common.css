@@ -94,6 +94,7 @@ span#logo-txt {
 
 .nav-element:hover{
     color: #b8860b;
+    transition: ease-in 100ms;
 }
 
 .nav-icon {

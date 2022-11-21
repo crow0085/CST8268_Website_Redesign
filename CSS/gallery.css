@@ -13,7 +13,7 @@
 
     --fs-reg: 1em;
     --fs-desc: 1em;
-    --fs-team: 1.5em;
+    --fs-team: 1.25em;
     --fs-name: 1.75em;
 
     --fw-reg: 400;
@@ -28,22 +28,25 @@ body {
 .popup {
     display: none;
     position: fixed;
-    width: 50%;
-    height: 70%;
+    width: 45%;
+    height: 90%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 5px solid black;
+    border: 3px solid black;
     padding: 10px;
-    background-color: grey;
+    background-color: white;
     overflow: auto;
     overflow-x: hidden;
     text-align: center;
+    box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+    -webkit-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+    -moz-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
 }
 
 .btn-close::before {
     font-family: "Font Awesome 5 Free"; 
-    font-weight: 400; 
+    font-weight: 700; 
     font-size: 2.5em;
     content: "\f057";
     display: inline-block;
@@ -52,17 +55,20 @@ body {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     background: transparent;
-    color: white;
+    color: black;
     cursor: pointer;
   }
 
 #closePopup {
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-desc);
     background: transparent;
     position: absolute;
     right: 2%;
     border: none;
+}
+
+#closePopup:hover{
+    opacity: 70%;
+    transition: ease-in 150ms;
 }
 
 .disable-events {
@@ -97,23 +103,29 @@ body {
     max-height: 350px;
     object-fit: cover;
     height: auto;
+    padding: 10px;
 }
 
 .popup-name {
     font-size: var(--fs-name);
-    font-weight: var(--fw-reg);
-    color: white;
+    font-weight: var(--fw-bold);
+    color: black;
 }
 .popup-team {
+    width: 75%;
+    margin: 0 auto;
     font-size: var(--fs-team);
     font-weight: var(--fw-bold);
+    padding-top: 5px;
 }
 
 .popup-description {
     font-size: var(--fs-desc);
-    color: white;
+    color: black;
     width: 75%;
     margin: 0 auto;
+    padding-top: 25px;
+    text-align: justify;
 }
 
 .memberContainer {
