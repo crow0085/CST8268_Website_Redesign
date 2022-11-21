@@ -59,7 +59,7 @@ section {
     width: 100%;
     height: 70px;
     background: #606FC7;
-    box-shadow: 0px 1px 10px #999;
+    box-shadow: 0px 1px 5px #999;
 }
 
 .logo-container {
@@ -69,7 +69,7 @@ section {
     height: inherit;
     display: flex;
     align-items: center;
-    margin-left: 36px;
+    margin-left: 16px;
 }
 
 #logo-img {
@@ -163,7 +163,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     background-color: #3f51b5;
-    padding: 15px 66px;
+    padding: 15px 56px;
 }
 
 .socialContainer {
@@ -192,6 +192,7 @@ footer {
     flex-direction: column;
     text-align: right;
     color: white;
+    margin-right: 10px;
 }
 
 .contactInfo a {
