@@ -32,6 +32,7 @@ body {
     height: 90%;
     left: 50%;
     top: 50%;
+    z-index: 10;
     transform: translate(-50%, -50%);
     border: 3px solid black;
     padding: 10px;
@@ -96,6 +97,10 @@ body {
     padding: 50px;
 }
 
+.gallerySection {
+    padding: 25px;
+}
+
 .popup img {
     min-width: 300px;
     max-width: 300px;  
@@ -112,7 +117,7 @@ body {
     color: black;
 }
 .popup-team {
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     font-size: var(--fs-team);
     font-weight: var(--fw-bold);

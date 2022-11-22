@@ -49,6 +49,7 @@ function FillCard(id) {
     $("#popup").fadeTo("fast", 1); // making the popup card appear
     $(".content").fadeTo("fast", 0.33);// dimming the gallery 
     $("#header").fadeTo("fast", 0.33); // dimming the header 
+    $("#footer").fadeTo("fast", 0.33);
     $("#gallery").find("*").addClass("disable-events"); // adding the disable events class to all child objects in the image gallery so you cant click an image while one is already blown up
 }
 
@@ -56,6 +57,7 @@ function closeCard() {
     $("#popup").fadeTo("fast", 0); // making so the popup is no longer visible
     $(".content").fadeTo("fast", 1); // setting the gallery to fully visible
     $("#header").fadeTo("fast", 1); // setting the header to fully visible
+    $("#footer").fadeTo("fast", 1);
     $("#gallery").find("*").removeClass("disable-events"); // removing the disable events class so you can click on another image
     $("#popup").hide(); // hiding the popup
     $("#popup").empty(); // emptying the popup div so the next time it populates it has no data
