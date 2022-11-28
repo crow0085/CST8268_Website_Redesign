@@ -103,7 +103,7 @@ span#logo-txt {
 }
 
 .nav-element:hover{
-    color: #b8860b;
+    color: #DAB71C;
     transition: ease-in 100ms;
 }
 
@@ -211,7 +211,7 @@ footer {
 }
 
 .contactInfo a:hover {
-    opacity: 70%;
+    color: #DAB71C;
     transition: ease-in 100ms;
 }
 
