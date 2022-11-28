@@ -22,17 +22,12 @@
 
 }
 
-body {
-    width: 100%;
-}
-
-.indexMain {
-    width: 75%;
-    margin: 0 auto;
-}
+/* Hero Section */
 
 .hero {
     display: grid;
+    width: 75%;
+    margin: 0 auto;
     padding: 100px 50px;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
@@ -60,7 +55,7 @@ body {
 }
 
 .heroImage img {
-    width: 500px;
+    width: 450px;
 }
 
 .homeTitle {
@@ -73,26 +68,30 @@ body {
     padding-bottom: 30px;
 }
 
-.welcomeInfo {
+.welcomeSection {
     margin: 0;
-    padding: 0px 66px;
     background-color: #F0F5F7;
-    min-width: 100%;
 }
 
+.welcomeInfo {
+    width: 75%;
+    margin: 0 auto;
+}
 
 /* Donation Info Container */
 
 .donationSectionContainer {
     height: 600px;
     padding: 0;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .donationInfo{
     display: grid;
     padding: 100px 0; 
     height: 100%;   
-    gap: 45px;
+    gap: 30px;
     text-align: center;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -102,9 +101,10 @@ body {
     flex-direction: column; 
     padding: 20px;
     border-radius: 30px;
+    min-width: 400px;
+    max-width: 450px;
     min-height: 300px;
     max-height: 400px;
-    /* border: solid 2px black; */
     background-color: #2C7DA0;
 }
 
@@ -150,7 +150,9 @@ body {
 
 /* Sponsors Section */
 
-
+.sponsors {
+    justify-content: center;
+}
 
 #sponsorTitle {
     font-size: var(--fs-team);
