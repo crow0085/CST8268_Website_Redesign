@@ -127,7 +127,7 @@ span#logo-txt {
     left: 0;
     text-align: center;
     background: rgb(0 0 0 / 0.7);
-    height: 100vh;
+    height: 50vh;
     transition: all 300ms;
 }
 
@@ -221,3 +221,49 @@ footer {
 /*
     ----------------- END COMMON CSS ------------------------
 */
+
+@media screen and (max-width: 1199px) and (min-width: 770px) {
+    .copyright {
+        font-size: 14px;
+    }
+
+    .contactInfo {
+        font-size: 14px;
+    }
+
+    .socialIcons {
+        width: 25px;
+        /* padding: 0 10px; */
+        margin: auto 5px;
+    }
+    
+    .socialIcons img:hover {
+        opacity: 70%;
+        transition: ease-in 100ms;
+    }
+}
+
+@media screen and (max-width: 769px) and (min-width: 576px) {
+    .footer {
+        padding: 15px 10px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+    .contactInfo {
+        font-size: 12px;
+    }
+
+    .socialIcons {
+        width: 20px;
+        /* padding: 0 10px; */
+        margin: auto 5px;
+    }
+    
+    .socialIcons img:hover {
+        opacity: 70%;
+        transition: ease-in 100ms;
+    }
+}
