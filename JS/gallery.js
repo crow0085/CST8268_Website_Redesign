@@ -1,5 +1,5 @@
 var peopleJson;
-var path = '/DATA/people.json';
+var path = 'https://crow0085.github.io/CST8268_Website_Redesign/DATA/people.json';
 
 $(document).ready(async function () {
     peopleJson = await getJSON();
@@ -10,7 +10,8 @@ $(document).ready(async function () {
         div.addClass("memberContainer")
         var img = $('<img id="img' + i + '">'); // the image
         img.addClass("memberImg") // adding image class to all imgs
-        img.attr('src', value.image.path); // setting the image source
+        var src = 'https://crow0085.github.io/CST8268_Website_Redesign' + value.image.path
+        img.attr('src', src); // setting the image source
         div.click(function () { // adding the click event to the image
             var id = this.id.split("div"); // removing the img part of the images id to only pass the index value
             id = id.at(-1);
