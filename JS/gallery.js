@@ -38,7 +38,7 @@ async function getJSON() {
 
 function FillCard(id) {
 
-    var path = peopleJson[id].image.path;
+    var path = 'https://crow0085.github.io/CST8268_Website_Redesign' + peopleJson[id].image.path;
     var name = peopleJson[id].name;
     var team = peopleJson[id].team;
     var desc = peopleJson[id].description;
