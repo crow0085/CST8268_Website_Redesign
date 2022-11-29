@@ -90,7 +90,7 @@ body {
     background-color: #FFFFF0;
     border: 25px solid transparent;
     border-image-slice: 50 50 50 50;
-    border-image-source: url("/Images/Wood-Frame.jpg");
+    border-image-source: url("https://crow0085.github.io/CST8268_Website_Redesign/Images/Wood-Frame.jpg");
     border-radius: 2px;
     justify-content: center;
     align-items: center;
