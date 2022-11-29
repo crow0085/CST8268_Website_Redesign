@@ -267,3 +267,33 @@ footer {
         transition: ease-in 100ms;
     }
 }
+
+@media screen and (max-width: 575px) {
+   
+    .footer {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+
+    .contactInfo * {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .socialIcons {
+        width: 20px;
+        /* padding: 0 10px; */
+        margin: auto 5px;
+    }
+    
+    .socialIcons img:hover {
+        opacity: 70%;
+        transition: ease-in 100ms;
+    }
+}
