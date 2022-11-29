@@ -137,6 +137,7 @@
     .donationInfo{
         display: grid;
         padding: 100px 0; 
+        justify-items: center;
         height: 100%;   
         gap: 50px;
         text-align: center;
