@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-sans-serif);
+}
+
+@media screen and (min-width: 1200px) {
+    .container {  
+        min-height: 60%;
+      }
+      
+      .mission-container { 
+        width: 75%;
+        margin: 0 auto;
+        padding: 10px 30px;
+        align-items: center;
+        font-size: 1.35rem;
+    }
+
+    .aboutTitles{
+        font-size: 3rem;
+    }
+      
+      .meet-team-container {  
+        padding-bottom: 50px;
+        background-color: #F0F5F7;
+      }
+      
+    h2 { 
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .meet-team-img-container {  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .people { 
+        padding: 30px;
+       }
+      
+      
+      .contact-container { 
+        width: 75%;
+        margin: 0 auto;
+        padding: 10px 30px;
+        align-items: center;
+        align-content: center;
+        font-size: 1.35rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1199px) and (min-width: 770px){
+    .container {  
+        min-height: 50%;
+      }
+      
+      .mission-container { 
+        width: 75%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .aboutTitles{
+        font-size: 1.35rem;
+    }
+      
+      .meet-team-container {  
+        padding-bottom: 50px;
+        background-color: #F0F5F7;
+      }
+      
+    h2 { 
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .meet-team-img-container {  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .people { 
+        padding: 30px;
+       }
+      
+      
+      .contact-container { 
+        width: 75%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        align-items: center;
+        align-content: center;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 769px) and (min-width: 576px) {
+    .container {  
+        min-height: 50%;
+      }
+      
+      .mission-container { 
+        width: 75%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .aboutTitles{
+        font-size: 1.35rem;
+    }
+      
+      .meet-team-container {  
+        padding-bottom: 50px;
+        background-color: #F0F5F7;
+      }
+      
+    h2 { 
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .meet-team-img-container {  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .people { 
+        padding: 30px;
+       }
+      
+      
+      .contact-container { 
+        width: 75%;
+        margin: 0 auto;
+        padding: 10px 20px;
+        align-items: center;
+        align-content: center;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 575px) {
+}
