@@ -23,159 +23,416 @@
 }
 
 /* Hero Section */
+@media screen and (min-width: 1200px) {
 
-.hero {
-    display: grid;
-    width: 75%;
-    margin: 0 auto;
-    padding: 100px 50px;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 60%;
+    .hero {
+        display: grid;
+        width: 75%;
+        margin: 0 auto;
+        padding: 100px 50px;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 60%;
+    }
+
+    .heroButton {
+        background-color: #2C7DA0;
+        color: white;
+        font-size: 18px;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 30px;
+    }
+
+    .heroButton:hover {
+        cursor: pointer;
+        opacity: 70%;
+        transition: ease-in 150ms;
+    }
+
+    .heroImage {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .heroImage img {
+        width: 450px;
+    }
+
+    .homeTitle {
+        font-size: 3rem;
+    }
+
+    .homeSubtitle {
+        font-size: var(--fs-name);
+        font-weight: var(--fs-reg);
+        padding-bottom: 30px;
+    }
+
+    /* Welcome Section */
+
+    .welcomeSection {
+        margin: 0;
+        padding: 0;
+        background-color: #F0F5F7;
+    }
+
+    .welcomeInfo {
+        width: 75%;
+        padding: 100px 0;
+        margin: 0 auto;
+    }
+
+    .welcomeTitle, .welcomeSubtitle {
+        text-align: center;
+    }
+
+    .welcomeTitle {
+        font-size: var(--fs-heading);
+        font-weight: var(--fw-bold)
+    }
+
+    .welcomeSubtitle{
+        font-size: var(--fs-name);
+        padding-bottom: 50px;
+    }
+
+    /* Goals Container */
+
+    .goalsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+
+    .goalItems img {
+        padding-bottom: 5px;
+    }
+
+    .goalItems p {
+        text-align: left;
+        padding-bottom: 50px;
+    }
+
+    .goalTitle {
+        font-size: 1.35rem;
+        text-align: left;
+    }
+
+    .goalSubtitle {
+        font-size: var(--fs-reg);
+        padding-top: 50px;
+        text-align: center;
+        font-weight: var(--fw-bold);
+    }
+
+    /* Donation Info Container */
+
+    .donationSectionContainer {
+        /* height: 600px; */
+        padding: 0;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .donationInfo{
+        display: grid;
+        padding: 100px 0; 
+        height: 100%;   
+        gap: 50px;
+        text-align: center;
+        grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+    }
+
+    .donations, .allStars, .sponsors {
+        display: flex;
+        flex-direction: column; 
+        padding: 20px;
+        border-radius: 30px;
+        min-width: 400px;
+        max-width: 450px;
+        min-height: 300px;
+        max-height: 400px;
+        background-color: #2C7DA0;
+    }
+
+    /* Donation Section */
+
+    .donations, .allStars {
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .donations:hover, .allStars:hover {
+        opacity: 70%;
+        transition:  ease-in 150ms;
+    }
+
+    .donationIcon img {
+        margin: 10px auto;
+        width: 110px;
+        color: white;
+        text-align: center;
+    }
+
+    .donationText1, .allStarText1 {
+        font-size: 1.5rem;
+        color: white;
+        align-items: flex-end;
+    }
+
+    .donationText2, .allStarText2 {
+        font-size: var(--fs-reg);
+        color: white;
+        align-items: flex-end;
+        width: 85%;
+    }
+
+    /* All Stars Section */
+
+    .allStarIcon img {
+        width: 110px;
+    }
+
+    /* Sponsors Section */
+
+    .sponsors {
+        justify-content: center;
+    }
+
+    #sponsorTitle {
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+        padding-bottom: 15px;
+        color: white;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .sponsors li {
+        list-style:none;
+        padding: 5px 0;
+        color: white;
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+    }
+
+    /* Thank You Section */
+
+    .thankYouMessage {
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+        text-align: center;
+        padding: 25px 66px 25px 66px;
+    }
 }
 
-.heroButton {
-    background-color: #2C7DA0;
-    color: white;
-    font-size: 18px;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 30px;
-}
+@media screen and (max-width: 1199px) and (min-width: 800px){
 
-.heroButton:hover {
-    cursor: pointer;
-    opacity: 70%;
-    transition: ease-in 150ms;
-}
+    .hero {
+        display: grid;
+        width: 85%;
+        margin: 0 auto;
+        padding: 100px 25px;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 50%;
+    }
 
-.heroImage {
-    display: flex;
-    justify-content: flex-end;
-}
+    .heroButton {
+        background-color: #2C7DA0;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+    }
 
-.heroImage img {
-    width: 450px;
-}
+    .heroButton:hover {
+        cursor: pointer;
+        opacity: 70%;
+        transition: ease-in 150ms;
+    }
 
-.homeTitle {
-    font-size: 3rem;
-}
+    .heroImage {
+        display: flex;
+        justify-content: flex-end;
+    }
 
-.homeSubtitle {
-    font-size: var(--fs-name);
-    font-weight: var(--fs-reg);
-    padding-bottom: 30px;
-}
+    .heroImage img {
+        width: 350px;
+    }
 
-.welcomeSection {
-    margin: 0;
-    background-color: #F0F5F7;
-}
+    .homeTitle {
+        font-size: var(--fs-heading);
+    }
 
-.welcomeInfo {
-    width: 75%;
-    margin: 0 auto;
-}
+    .homeSubtitle {
+        font-size: 1.5rem;
+        font-weight: var(--fs-reg);
+        padding-bottom: 30px;
+    }
 
-/* Donation Info Container */
+    /* Welcome Section */
 
-.donationSectionContainer {
-    height: 600px;
-    padding: 0;
-    width: 75%;
-    margin: 0 auto;
-}
+    .welcomeSection {
+        margin: 0;
+        padding: 0;
+        background-color: #F0F5F7;
+    }
 
-.donationInfo{
-    display: grid;
-    padding: 100px 0; 
-    height: 100%;   
-    gap: 30px;
-    text-align: center;
-    grid-template-columns: repeat(3, 1fr);
-}
+    .welcomeInfo {
+        width: 85%;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
 
-.donations, .allStars, .sponsors {
-    display: flex;
-    flex-direction: column; 
-    padding: 20px;
-    border-radius: 30px;
-    min-width: 400px;
-    max-width: 450px;
-    min-height: 300px;
-    max-height: 400px;
-    background-color: #2C7DA0;
-}
+    .welcomeTitle, .welcomeSubtitle {
+        text-align: center;
+    }
 
-/* Donation Section */
+    .welcomeTitle {
+        font-size: 1.5rem;
+        font-weight: var(--fw-bold)
+    }
 
-.donations, .allStars {
-    display: flex;
-    gap: 10px;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    .welcomeSubtitle{
+        font-size: var(--fs-team);
+        padding-bottom: 50px;
+    }
 
-.donations:hover, .allStars:hover {
-    opacity: 70%;
-    transition:  ease-in 150ms;
-}
+    /* Goals Container */
 
-.donationIcon img {
-    margin: 10px auto;
-    width: 110px;
-    color: white;
-    text-align: center;
-}
+    .goalsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
 
-.donationText1, .allStarText1 {
-    font-size: 1.5rem;
-    color: white;
-    align-items: flex-end;
-}
+    .goalItems img {
+        padding-bottom: 5px;
+    }
 
-.donationText2, .allStarText2 {
-    font-size: var(--fs-reg);
-    color: white;
-    align-items: flex-end;
-    width: 85%;
-}
+    .goalItems p {
+        font-size: 16px;
+        text-align: left;
+        padding-bottom: 25px;
+    }
 
-/* All Stars Section */
+    .goalTitle {
+        font-size: 18px;
+        text-align: left;
+    }
 
-.allStarIcon img {
-    width: 110px;
-}
+    .goalSubtitle {
+        font-size: var(--fs-reg);
+        padding-top: 50px;
+        text-align: center;
+        font-weight: var(--fw-bold);
+    }
 
-/* Sponsors Section */
+    /* Donation Info Container */
 
-.sponsors {
-    justify-content: center;
-}
+    .donationSectionContainer {
+        /* height: 600px; */
+        padding: 0;
+        width: 85%;
+        margin: 0 auto;
+    }
 
-#sponsorTitle {
-    font-size: var(--fs-team);
-    font-weight: var(--fw-bold);
-    padding-bottom: 15px;
-    color: white;
-    width: 85%;
-    margin: 0 auto;
-}
+    .donationInfo{
+        display: grid;
+        padding: 50px 0; 
+        height: 100%; 
+        gap: 60px;
+        justify-items: center;
+        text-align: center;
+        grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+    }
 
-.sponsors li {
-    list-style:none;
-    padding: 5px 0;
-    color: white;
-    font-size: var(--fs-team);
-    font-weight: var(--fw-bold);
-}
+    .donations, .allStars, .sponsors {
+        display: flex;
+        flex-direction: column; 
+        padding: 20px;
+        border-radius: 30px;
+        min-width: 400px;
+        max-width: 450px;
+        min-height: 300px;
+        max-height: 400px;
+        background-color: #2C7DA0;
+    }
 
-/* Thank You Section */
+    /* Donation Section */
 
-.thankYouMessage {
-    font-size: var(--fs-team);
-    font-weight: var(--fw-bold);
-    text-align: center;
-    padding: 25px 66px 25px 66px;
+    .donations, .allStars {
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .donations:hover, .allStars:hover {
+        opacity: 70%;
+        transition:  ease-in 150ms;
+    }
+
+    .donationIcon img {
+        margin: 10px auto;
+        width: 90px;
+        color: white;
+        text-align: center;
+    }
+
+    .donationText1, .allStarText1 {
+        font-size: 1.5rem;
+        color: white;
+        align-items: flex-end;
+    }
+
+    .donationText2, .allStarText2 {
+        font-size: var(--fs-reg);
+        color: white;
+        align-items: flex-end;
+        width: 85%;
+    }
+
+    /* All Stars Section */
+
+    .allStarIcon img {
+        width: 90px;
+    }
+
+    /* Sponsors Section */
+
+    .sponsors {
+        justify-content: center;
+    }
+
+    #sponsorTitle {
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+        padding-bottom: 15px;
+        color: white;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .sponsors li {
+        list-style:none;
+        padding: 5px 0;
+        color: white;
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+    }
+
+    /* Thank You Section */
+
+    .thankYouMessage {
+        font-size: 1.15rem;
+        font-weight: var(--fw-bold);
+        text-align: center;
+        padding: 0px 66px 50px 66px;
+    }
 }
