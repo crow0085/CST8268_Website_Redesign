@@ -15,6 +15,7 @@
     --fs-desc: 1em;
     --fs-team: 1.25em;
     --fs-name: 1.75em;
+    --fs-heading: 2rem;
 
     --fw-reg: 400;
     --fw-bold: 700;
@@ -24,154 +25,714 @@
 body {
     min-height: 100vh;
 }
+@media screen and (min-width: 1200px) {
 
-.popup {
-    display: none;
-    position: fixed;
-    width: 45%;
-    height: 90%;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    border: 3px solid black;
-    padding: 10px;
-    background-color: white;
-    overflow: auto;
-    overflow-x: hidden;
-    text-align: center;
-    box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
-    -webkit-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
-    -moz-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+    .galleryHero {
+        display: grid;
+        width: 75%;
+        margin: 0 auto;
+        padding: 50px 20px;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 50%;
+    }
+
+    .galleryImage {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .galleryImage img {
+        width: 450px;
+    }
+
+    .gallerySubtitle {
+        font-size: var(--fs-heading);
+        padding-bottom: 25px;
+    }
+
+    .galleryDesc {
+        padding-top: 25px;
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+    }
+
+    .galleryInfo {
+        font-size: var(--fs-team);
+    }
+    
+    .popup {
+        display: none;
+        position: fixed;
+        width: 50%;
+        height: 90%;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        border: 3px solid black;
+        padding: 10px;
+        background-color: white;
+        overflow: auto;
+        overflow-x: hidden;
+        text-align: center;
+        box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+        -webkit-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+        -moz-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+    }
+
+    .btn-close::before {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 700; 
+        font-size: 2.5em;
+        content: "\f057";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        background: transparent;
+        color: black;
+        cursor: pointer;
+    }
+
+    #closePopup {
+        background: transparent;
+        position: absolute;
+        right: 2%;
+        border: none;
+    }
+
+    #closePopup:hover{
+        opacity: 70%;
+        transition: ease-in 150ms;
+    }
+
+    .disable-events {
+        pointer-events: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .gallerySection {
+        background-color: #F0F5F7;
+        padding: 0;    
+    }
+
+    .popup img {
+        min-width: 300px;
+        max-width: 300px;  
+        min-height: 300px;
+        max-height: 350px;
+        object-fit: cover;
+        height: auto;
+        padding: 10px;
+    }
+
+    .popup-name {
+        font-size: var(--fs-name);
+        font-weight: var(--fw-bold);
+        color: black;
+    }
+    .popup-team {
+        width: 60%;
+        margin: 0 auto;
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+        padding-top: 5px;
+    }
+
+    .popup-description {
+        font-size: var(--fs-desc);
+        color: black;
+        width: 75%;
+        margin: 0 auto;
+        padding-top: 25px;
+        text-align: justify;
+    }
+
+    .memberContainer {
+        border-top: 25px ridge #012A4A;
+        border-right: 25px ridge #014F86;
+        border-left: 25px groove #014F86;
+        border-bottom: 25px groove #012A4A;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .memberContainer:hover {
+        cursor: pointer;
+        opacity: 70%;
+        transition: ease-in-out 250ms;
+
+
+    }
+
+    .memberImg {
+        box-shadow: #292929;
+        min-width: 200px;  
+        max-height: 250px;
+        object-fit:cover;
+    }
+
+    .memberName {
+        width: 200px;
+        overflow-wrap: break-word;
+        text-align: center;
+        color: black;
+        font-weight: var(--fw-reg);
+        font-size: var(--fs-name);
+        padding: 5px;
+    }
+
+    #gallery {
+        padding: 30px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
+        max-width: 100%;
+        gap: 150px;
+    }
 }
 
-.btn-close::before {
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 700; 
-    font-size: 2.5em;
-    content: "\f057";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    background: transparent;
-    color: black;
-    cursor: pointer;
-  }
+@media screen and (max-width: 1199px) and (min-width: 770px) {
+    
+    .galleryHero {
+        display: grid;
+        width: 85%;
+        margin: 0 auto;
+        padding: 100px 25px;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 50%;
+    }
 
-#closePopup {
-    background: transparent;
-    position: absolute;
-    right: 2%;
-    border: none;
+    .galleryImage {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .galleryImage img {
+        width: 350px;
+    }
+
+    .gallerySubtitle {
+        font-size: var(--fs-name);
+        padding-bottom: 25px;
+    }
+
+    .galleryDesc {
+        padding-top: 25px;
+        font-size: 14px;
+        font-weight: var(--fw-bold);
+    }
+
+    .galleryInfo {
+        font-size: var(--fs-reg);
+    }
+    
+    .popup {
+        display: none;
+        position: fixed;
+        width: 80%;
+        height: 75%;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        border: 3px solid black;
+        padding: 10px;
+        background-color: white;
+        overflow: auto;
+        overflow-x: hidden;
+        text-align: center;
+        box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+        -webkit-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+        -moz-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+    }
+
+    .btn-close::before {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 700; 
+        font-size: 2.5em;
+        content: "\f057";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        background: transparent;
+        color: black;
+        cursor: pointer;
+    }
+
+    #closePopup {
+        background: transparent;
+        position: absolute;
+        right: 2%;
+        border: none;
+    }
+
+    #closePopup:hover{
+        opacity: 70%;
+        transition: ease-in 150ms;
+    }
+
+    .disable-events {
+        pointer-events: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .gallerySection {
+        background-color: #F0F5F7;
+        padding: 0;    
+    }
+
+    .popup img {
+        min-width: 250px;
+        max-width: 250px;  
+        min-height: 250px;
+        max-height: 300px;
+        object-fit: cover;
+        height: auto;
+        padding: 10px;
+    }
+
+    .popup-name {
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+        color: black;
+    }
+    .popup-team {
+        width: 60%;
+        margin: 0 auto;
+        font-size: var(--fs-reg);
+        font-weight: var(--fw-bold);
+        padding-top: 5px;
+    }
+
+    .popup-description {
+        font-size: var(--fs-desc);
+        color: black;
+        width: 75%;
+        margin: 0 auto;
+        padding-top: 25px;
+        text-align: justify;
+    }
+
+    .memberContainer {
+        border-top: 25px ridge #012A4A;
+        border-right: 25px ridge #014F86;
+        border-left: 25px groove #014F86;
+        border-bottom: 25px groove #012A4A;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .memberContainer:hover {
+        cursor: pointer;
+        opacity: 70%;
+        transition: ease-in-out 250ms;
+
+
+    }
+
+    .memberImg {
+        box-shadow: #292929;
+        min-width: 200px;  
+        max-height: 250px;
+        object-fit:cover;
+    }
+
+    .memberName {
+        width: 200px;
+        overflow-wrap: break-word;
+        text-align: center;
+        color: black;
+        font-weight: var(--fw-reg);
+        font-size: var(--fs-name);
+        padding: 5px;
+    }
+
+    #gallery {
+        padding: 30px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
+        max-width: 100%;
+        gap: 150px;
+    }
 }
 
-#closePopup:hover{
-    opacity: 70%;
-    transition: ease-in 150ms;
+@media screen and (max-width: 769px) and (min-width: 576px) {
+        
+    .galleryHero {
+        display: grid;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 20px;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 50%;
+    }
+
+    .galleryImage {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .galleryImage img {
+        width: 200px;
+    }
+
+    .gallerySubtitle {
+        font-size: var(--fs-name);
+        padding-bottom: 25px;
+    }
+
+    .galleryDesc {
+        padding-top: 25px;
+        font-size: 14px;
+        font-weight: var(--fw-bold);
+    }
+
+    .galleryInfo {
+        font-size: var(--fs-reg);
+    }
+    
+    .popup {
+        display: none;
+        position: fixed;
+        width: 85%;
+        height: 70%;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        border: 3px solid black;
+        padding: 10px;
+        background-color: white;
+        overflow: auto;
+        overflow-x: hidden;
+        text-align: center;
+        box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+        -webkit-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+        -moz-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+    }
+
+    .btn-close::before {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 700; 
+        font-size: 2.5em;
+        content: "\f057";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        background: transparent;
+        color: black;
+        cursor: pointer;
+    }
+
+    #closePopup {
+        background: transparent;
+        position: absolute;
+        right: 2%;
+        border: none;
+    }
+
+    #closePopup:hover{
+        opacity: 70%;
+        transition: ease-in 150ms;
+    }
+
+    .disable-events {
+        pointer-events: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 40px;
+    }
+
+    .gallerySection {
+        background-color: #F0F5F7;
+        padding: 0;    
+    }
+
+    .popup img {
+        min-width: 200px;
+        max-width: 200px;  
+        min-height: 200px;
+        max-height: 250px;
+        object-fit: cover;
+        height: auto;
+        padding: 10px;
+    }
+
+    .popup-name {
+        font-size: var(--fs-team);
+        font-weight: var(--fw-bold);
+        color: black;
+    }
+    .popup-team {
+        width: 80%;
+        margin: 0 auto;
+        font-size: var(--fs-reg);
+        font-weight: var(--fw-bold);
+        padding-top: 5px;
+    }
+
+    .popup-description {
+        font-size: 14px;
+        color: black;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 25px;
+        text-align: justify;
+    }
+
+    .memberContainer {
+        border-top: 25px ridge #012A4A;
+        border-right: 25px ridge #014F86;
+        border-left: 25px groove #014F86;
+        border-bottom: 25px groove #012A4A;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .memberContainer:hover {
+        cursor: pointer;
+        opacity: 70%;
+        transition: ease-in-out 250ms;
+
+
+    }
+
+    .memberImg {
+        box-shadow: #292929;
+        min-width: 200px;  
+        max-height: 250px;
+        object-fit:cover;
+    }
+
+    .memberName {
+        width: 200px;
+        overflow-wrap: break-word;
+        text-align: center;
+        color: black;
+        font-weight: var(--fw-reg);
+        font-size: var(--fs-name);
+        padding: 5px;
+    }
+
+    #gallery {
+        padding: 30px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
+        max-width: 100%;
+        gap: 120px;
+    }
 }
 
-.disable-events {
-    pointer-events: none;
-}
+@media screen and (max-width: 575px) {
+            
+    .galleryHero {
+        display: grid;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 20px;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 50%;
+    }
 
-.galleryTitle {
-    font-size: var(--fs-name);
-    font-weight: var(--fw-bold);
-    padding-bottom: 20px;
-}
+    .galleryImage {
+        display: flex;
+        justify-content: flex-end;
+    }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin: 0 auto;
-    background-color: #FFFFF0;
-    border: 25px solid transparent;
-    border-image-slice: 50 50 50 50;
-    border-image-source: url("https://crow0085.github.io/CST8268_Website_Redesign/Images/Wood-Frame.jpg"); /* updated path to server img */
-    border-radius: 2px;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
+    .galleryImage img {
+        width: 150px;
+    }
 
-.gallerySection {
-    padding: 25px;
-}
+    .gallerySubtitle {
+        font-size: var(--fs-reg);
+        padding-bottom: 25px;
+    }
 
-.popup img {
-    min-width: 300px;
-    max-width: 300px;  
-    min-height: 300px;
-    max-height: 350px;
-    object-fit: cover;
-    height: auto;
-    padding: 10px;
-}
+    .galleryDesc {
+        padding-top: 25px;
+        font-size: 10px;
+        font-weight: var(--fw-bold);
+    }
 
-.popup-name {
-    font-size: var(--fs-name);
-    font-weight: var(--fw-bold);
-    color: black;
-}
-.popup-team {
-    width: 60%;
-    margin: 0 auto;
-    font-size: var(--fs-team);
-    font-weight: var(--fw-bold);
-    padding-top: 5px;
-}
+    .galleryInfo {
+        font-size: 12px;
+    }
+    
+    .popup {
+        display: none;
+        position: fixed;
+        width: 95%;
+        height: 70%;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        border: 3px solid black;
+        padding: 10px;
+        background-color: white;
+        overflow: auto;
+        overflow-x: hidden;
+        text-align: center;
+        box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+        -webkit-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+        -moz-box-shadow: -1px 5px 14px 6px rgba(0,0,0,0.6);
+    }
 
-.popup-description {
-    font-size: var(--fs-desc);
-    color: black;
-    width: 75%;
-    margin: 0 auto;
-    padding-top: 25px;
-    text-align: justify;
-}
+    .btn-close::before {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 700; 
+        font-size: 2.5em;
+        content: "\f057";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        background: transparent;
+        color: black;
+        cursor: pointer;
+    }
 
-.memberContainer {
-    border-top: 25px ridge #DFCAA0;
-    border-right: 25px ridge #DFCAA0;
-    border-left: 25px groove #DFCAA0;
-    border-bottom: 25px groove #DFCAA0;
-    padding: 10px;
-    background-color: white;
-}
+    #closePopup {
+        background: transparent;
+        position: absolute;
+        right: 2%;
+        border: none;
+    }
 
-.memberContainer:hover {
-    cursor: pointer;
-    opacity: 70%;
-    transition: ease-in-out 250ms;
+    #closePopup:hover{
+        opacity: 70%;
+        transition: ease-in 150ms;
+    }
+
+    .disable-events {
+        pointer-events: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 40px;
+    }
+
+    .gallerySection {
+        background-color: #F0F5F7;
+        padding: 0;    
+    }
+
+    .popup img {
+        min-width: 150px;
+        max-width: 150px;  
+        min-height: 150px;
+        max-height: 200px;
+        object-fit: cover;
+        height: auto;
+        padding: 10px;
+    }
+
+    .popup-name {
+        font-size: var(--fs-reg);
+        font-weight: var(--fw-bold);
+        color: black;
+    }
+    .popup-team {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 10px;
+        font-weight: var(--fw-bold);
+        padding-top: 5px;
+    }
+
+    .popup-description {
+        font-size: 10px;
+        color: black;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 10px;
+        text-align: justify;
+    }
+
+    .memberContainer {
+        border-top: 25px ridge #012A4A;
+        border-right: 25px ridge #014F86;
+        border-left: 25px groove #014F86;
+        border-bottom: 25px groove #012A4A;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .memberContainer:hover {
+        cursor: pointer;
+        opacity: 70%;
+        transition: ease-in-out 250ms;
 
 
-}
+    }
 
-.memberImg {
-    box-shadow: #292929;
-    min-width: 200px;  
-    max-height: 250px;
-    object-fit:cover;
-}
+    .memberImg {
+        box-shadow: #292929;
+        min-width: 200px;  
+        max-height: 250px;
+        object-fit:cover;
+    }
 
-.memberName {
-    width: 200px;
-    overflow-wrap: break-word;
-    text-align: center;
-    color: black;
-    font-weight: var(--fw-reg);
-    font-size: var(--fs-name);
-    padding: 5px;
-}
+    .memberName {
+        width: 200px;
+        overflow-wrap: break-word;
+        text-align: center;
+        color: black;
+        font-weight: var(--fw-reg);
+        font-size: var(--fs-name);
+        padding: 5px;
+    }
 
-#gallery {
-    padding: 30px;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
-    max-width: 100%;
-    gap: 150px;
+    #gallery {
+        padding: 30px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
+        max-width: 100%;
+        gap: 120px;
+    }
 }

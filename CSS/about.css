@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-sans-serif);
+}
+
+:root {   /* Root Properties */
+
+  /* Font Properties */
+  --ff-sans-serif:'Poppins', sans-serif;
+
+  --fs-reg: 1em;
+  --fs-desc: 1em;
+  --fs-team: 1.25em;
+  --fs-name: 1.75em;
+  --fs-heading: 2rem;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  /* Hero Styling */
+
+  .aboutHero {
+    display: grid;
+    width: 75%;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 100px 50px;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 60%;
+  }
+
+  .aboutHeroImage {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .aboutHeroImage img {
+    width: 450px;
+  }
+
+  .whoWeAreTitle{
+    font-size: 3rem;
+    padding-bottom: 25px;
+  }
+
+  .whoWeAreInfo {
+    font-size: var(--fs-team);
+    font-weight: var(--fs-reg);
+  }
+
+  .memberTitle{
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  /* Meet Team Styling */
+
+  .memberName {
+    font-size: var(--fs-team);
+    font-weight: var(--fw-bold);
+  }
+
+  .memberPosition {
+    font-weight: var(--fs-reg);
+  }
+    
+  .meetTeamContainer {  
+    padding: 50px;
+    background-color: #F0F5F7;
+  }
+
+  .meetTeamImageContainer {  
+    display: grid;
+    width: 75%;
+    margin: 0 auto;
+    grid-template-columns: repeat( auto-fit, minmax(325px, 1fr));
+    text-align: center;
+  }
+
+  .people img {
+    width: 100%;
+  }
+
+  .people {
+    padding: 20px 40px;
+  }
+
+  /* Contact Styling */
+    
+  .contact-container { 
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .contactTitle {
+    font-size: 2rem;
+    padding-bottom: 25px;
+  }
+
+  .contact-container a, p{
+    margin: 0 auto;
+    width: fit-content;
+    font-size: var(--fs-team);
+  }
+
+  .contact-container a:hover {
+      color: #014F86;
+    }
+}
+@media screen and (max-width: 1199px) and (min-width: 770px){
+   /* Hero Styling */
+
+   .aboutHero {
+    display: grid;
+    width: 85%;
+    margin: 0 auto;
+    padding: 100px 25px;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 50%;
+  }
+
+  .aboutHeroImage {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .aboutHeroImage img {
+    width: 350px;
+  }
+
+  .whoWeAreTitle{
+    font-size: var(--fs-heading);
+    padding-bottom: 25px;
+  }
+
+  .whoWeAreInfo {
+    font-size: var(--fs-reg);
+    font-weight: var(--fs-reg);
+  }
+
+  .memberTitle{
+    font-size: var(--fs-name);
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  /* Meet Team Styling */
+
+  .memberName {
+    font-size: var(--fs-team);
+    font-weight: var(--fw-bold);
+  }
+
+  .memberPosition {
+    font-weight: var(--fs-reg);
+  }
+    
+  .meetTeamContainer {  
+    padding: 50px 0;
+    background-color: #F0F5F7;
+  }
+
+  .meetTeamImageContainer {  
+    display: grid;
+    width: 85%;
+    margin: 0 auto;
+    grid-template-columns: repeat( auto-fit, minmax(325px, 1fr));
+    text-align: center;
+  }
+
+  .people img {
+    width: 100%;
+  }
+
+  .people {
+    padding: 10px 20px;
+  }
+
+  /* Contact Styling */
+    
+  .contact-container { 
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .contactTitle {
+    font-size: var(--fs-name);
+    padding-bottom: 25px;
+  }
+
+  .contact-container a, p{
+    margin: 0 auto;
+    width: fit-content;
+    font-size: var(--fs-team);
+  }
+
+  .contact-container a:hover {
+      color: #014F86;
+  }
+}
+@media screen and (max-width: 769px) and (min-width: 576px) {
+    /* Hero Styling */
+
+    .aboutHero {
+      display: grid;
+      width: 100%;
+      margin: 0 auto;
+      padding: 50px 20px;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      min-height: 50%;
+    }
+  
+    .aboutHeroImage {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .aboutHeroImage img {
+      width: 200px;
+    }
+  
+    .whoWeAreTitle{
+      font-size: var(--fs-name);
+      padding-bottom: 25px;
+    }
+  
+    .whoWeAreInfo {
+      font-size: 14px;
+      font-weight: var(--fs-reg);
+    }
+  
+    .memberTitle{
+      font-size: var(--fs-name);
+      text-align: center;
+      padding-bottom: 50px;
+    }
+  
+    /* Meet Team Styling */
+  
+    .memberName {
+      font-size: var(--fs-team);
+      font-weight: var(--fw-bold);
+    }
+  
+    .memberPosition {
+      font-weight: var(--fs-reg);
+    }
+      
+    .meetTeamContainer {  
+      padding: 20px;
+      background-color: #F0F5F7;
+    }
+  
+    .meetTeamImageContainer {  
+      display: grid;
+      width: 100%;
+      margin: 0 auto;
+      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+      text-align: center;
+    }
+  
+    .people img {
+      width: 80%;
+    }
+  
+    .people {
+      padding: 10px 5px;
+    }
+  
+    /* Contact Styling */
+      
+    .contact-container { 
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      padding: 25px 20px;
+      text-align: center;
+    }
+  
+    .contactTitle {
+      font-size: var(--fs-team);
+      padding-bottom: 25px;
+    }
+  
+    .contact-container a, p{
+      margin: 0 auto;
+      width: fit-content;
+      font-size: var(--fs-reg);
+    }
+  
+    .contact-container a:hover {
+        color: #014F86;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    /* Hero Styling */
+
+    .aboutHero {
+      display: grid;
+      width: 100%;
+      margin: 0 auto;
+      padding: 50px 20px;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      min-height: 50%;
+    }
+  
+    .aboutHeroImage {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .aboutHeroImage img {
+      width: 125px;
+    }
+  
+    .whoWeAreTitle{
+      font-size: var(--fs-reg);
+      padding-bottom: 15px;
+    }
+  
+    .whoWeAreInfo {
+      font-size: 10px;
+      font-weight: var(--fs-reg);
+    }
+  
+    .memberTitle{
+      font-size: var(--fs-reg) ;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  
+    /* Meet Team Styling */
+  
+    .memberName {
+      font-size: var(--fs-team);
+      font-weight: var(--fw-bold);
+    }
+  
+    .memberPosition {
+      font-weight: var(--fs-reg);
+    }
+      
+    .meetTeamContainer {  
+      padding: 20px;
+      background-color: #F0F5F7;
+    }
+  
+    .meetTeamImageContainer {  
+      display: grid;
+      width: 100%;
+      margin: 0 auto;
+      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+      text-align: center;
+    }
+  
+    .people img {
+      width: 75%;
+    }
+  
+    .people {
+      padding: 10px 5px;
+    }
+  
+    /* Contact Styling */
+      
+    .contact-container { 
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      padding: 25px 20px;
+      text-align: center;
+    }
+  
+    .contactTitle {
+      font-size: var(--fs-reg);
+      padding-bottom: 25px;
+    }
+  
+    .contact-container a, p{
+      margin: 0 auto;
+      width: fit-content;
+      font-size: 14px;
+    }
+  
+    .contact-container a:hover {
+        color: #014F86;
+    }
+}
