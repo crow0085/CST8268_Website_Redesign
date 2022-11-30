@@ -127,7 +127,7 @@ span#logo-txt {
     left: 0;
     text-align: center;
     background: rgb(0 0 0 / 0.7);
-    height: 100vh;
+    height: 100vh; /*making it cover the screen*/
     transition: all 300ms;
 }
 
