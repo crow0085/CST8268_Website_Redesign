@@ -1,16 +1,17 @@
 var peopleJson;
-var path = '/DATA/people.json';
+var getUrl = "http://localhost:5000/websiteredesign";
+//var path = '/DATA/people.json';
 
 $(document).ready(async function () {
     peopleJson = await getJSON();
-    peopleJson = peopleJson.people; // setting the json to only be of the people object, easier so dont have to add .people everytime searching the array
+    //peopleJson = peopleJson.people; // setting the json to only be of the people object, easier so dont have to add .people everytime searching the array
     // loop to populate gallery
     peopleJson.forEach(function (value, i) {
         var div = $('<div id="div' + i + '">'); // div to hold the image and name
         div.addClass("memberContainer")
         var img = $('<img id="img' + i + '">'); // the image
         img.addClass("memberImg") // adding image class to all imgs
-        img.attr('src', value.image.path); // setting the image source
+        img.attr('src', getUrl + "/" + value.image); // setting the image source
         div.click(function () { // adding the click event to the image
             var id = this.id.split("div"); // removing the img part of the images id to only pass the index value
             id = id.at(-1);
@@ -30,14 +31,14 @@ $(document).ready(async function () {
 
 // async function to read and return the json file
 async function getJSON() {
-    return await fetch(path)
+    return await fetch(getUrl)
         .then((response) => response.json())
         .then((responseJson) => { return responseJson });
 }
 
 function FillCard(id) {
 
-    var path = peopleJson[id].image.path;
+    var path = getUrl + "/" + peopleJson[id].image;
     var name = peopleJson[id].name;
     var team = peopleJson[id].team;
     var desc = peopleJson[id].description;

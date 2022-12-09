@@ -18,6 +18,7 @@ function getJsonData(){
                 $.each(returnData, function (index, value)
                 {
                     $('#drp-person').append("<option value='" + index + "'>" + value.name + "</option>");
+                    $('#drp-img').append("<option value='" + index + "'>" + value.image + "</option>");
                 });
                 
                 console.log(returnData);
@@ -33,9 +34,17 @@ function getJsonData(){
 
 $('#drp-person').change(function () {
     $("#drp-person option[value='-1']").remove();
+    $("#drp-img option[value='-1']").remove();
     var index = this.value;
     $('#name').val(peopleJson[index].name);
     $('#team').val(peopleJson[index].team);
     $('#description').val(peopleJson[index].description);
-    $('#img-path').val(peopleJson[index].image.path);
+    $('#drp-img').val(index);
+    $('#drp-img-prev').attr('src', getUrl + "/" + peopleJson[index].image);
+});
+
+$('#drp-img').change(function (e) { 
+    $("#drp-img option[value='-1']").remove();
+    var index = this.value;
+    $('#drp-img-prev').attr('src', getUrl + "/" + peopleJson[index].image);
 });
