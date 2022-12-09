@@ -59,6 +59,7 @@ function getImageData() {
 }
 
 $('#drp-person').change(function () {
+    $('#lblConfirmation').hide();
     $("#drp-person option[value='-1']").remove();
     $("#drp-img option[value='-1']").remove();
     currentSelected = this.value;
