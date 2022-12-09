@@ -1,4 +1,5 @@
 var apiUrl = "http://localhost:5000/websiteredesign";
+//var apiUrl = "http://localhost:5013/websiteredesign";
 var peopleJson;
 var imageNames;
 var currentSelected = -1;
@@ -95,6 +96,69 @@ $('#save').click(async function (e) {
             getJsonData();
             $('#lblConfirmation').show();
             $('#lblConfirmation').html("Successfully edited " + $('#name').val());
+        },
+        error: function (event, request, settings) {
+            console.log(settings);
+            console.log(event);
+            console.log(request);
+        }
+    });
+
+});
+
+$('#add').click(async function (e) {
+
+    var person = {
+        name: $('#name').val(),
+        image: $('#drp-img option:selected').text(),
+        team: $('#team').val(),
+        description: $('#description').val(),
+        id: peopleJson[$("#drp-person").val()].id
+    }
+    console.log(person);
+    await $.ajax({
+        url: apiUrl,
+        type: 'POST',
+        contentType: "application/json",
+        data: JSON.stringify(person),
+        async: true,
+        success: function () {
+            currentSelected = peopleJson.length;
+            alert(currentSelected);
+            getJsonData();
+            $('#lblConfirmation').show();
+            $('#lblConfirmation').html("Successfully added " + $('#name').val());
+        },
+        error: function (event, request, settings) {
+            console.log(settings);
+            console.log(event);
+            console.log(request);
+        }
+    });
+
+});
+
+$('#remove').click(function (e) {
+
+    var person = {
+        name: $('#name').val(),
+        image: $('#drp-img option:selected').text(),
+        team: $('#team').val(),
+        description: $('#description').val(),
+        id: peopleJson[$("#drp-person").val()].id
+    }
+    console.log(person);
+    $.ajax({
+        url: apiUrl,
+        headers: { 'Access-Control-Allow-Origin': '*' },
+        type: 'DELETE',
+        contentType: "application/json",
+        data: JSON.stringify(person),
+        success: function () {
+            currentSelected = -1;
+            getJsonData();
+            $('#lblConfirmation').show();
+            $('#lblConfirmation').html("Successfully deleted " + $('#name').val());
         },
         error: function (event, request, settings) {
             console.log(settings);
