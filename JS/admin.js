@@ -17,7 +17,6 @@ function getJsonData() {
         headers: { 'Access-Control-Allow-Origin': '*' },
         dataType: 'json',
         success: function (returnData) {
-            //alert('success');
             if (returnData !== null) {
                 $('#drp-person').empty();
                 if (currentSelected == -1)
@@ -32,7 +31,9 @@ function getJsonData() {
             }
         },
         error: function (event, request, settings) {
-            alert('AjaxError' + ' : ' + settings);
+            console.log(settings);
+            console.log(event);
+            console.log(request);
         }
     });
 }
@@ -44,7 +45,6 @@ function getImageData() {
         headers: { 'Access-Control-Allow-Origin': '*' },
         dataType: 'json',
         success: function (returnData) {
-            //alert('success');
             if (returnData !== null) {
                 $.each(returnData, function (index, value) {
                     $('#drp-img').append("<option value='" + value + "'>" + value + "</option>");
@@ -54,7 +54,9 @@ function getImageData() {
             }
         },
         error: function (event, request, settings) {
-            alert('AjaxError' + ' : ' + settings);
+            console.log(settings);
+            console.log(event);
+            console.log(request);
         }
     });
 }
@@ -124,7 +126,6 @@ $('#add').click(async function (e) {
         async: true,
         success: function () {
             currentSelected = peopleJson.length;
-            alert(currentSelected);
             getJsonData();
             $('#lblConfirmation').show();
             $('#lblConfirmation').html("Successfully added " + $('#name').val());
