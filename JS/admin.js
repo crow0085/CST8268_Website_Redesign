@@ -115,7 +115,7 @@ $('#add').click(async function (e) {
         image: $('#drp-img option:selected').text(),
         team: $('#team').val(),
         description: $('#description').val(),
-        id: peopleJson[$("#drp-person").val()].id
+        id: 0//peopleJson[$("#drp-person").val()].id
     }
     console.log(person);
     await $.ajax({
